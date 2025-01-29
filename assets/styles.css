@@ -1,0 +1,13 @@
+body {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+}
+navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 500px;
+  text-align: center;
+}
