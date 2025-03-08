@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.ttf");
+}
+
 body {
   margin: 0 auto;
   padding: 20px;
@@ -10,4 +15,17 @@ navbar {
   justify-content: space-between;
   max-width: 500px;
   text-align: center;
+}
+
+#photosBody {
+  font-family: "Poppins";
+}
+
+#photosDiv {
+  display: flex;
+}
+
+#photosDiv img {
+  height: 200px;
+  width: 200px;
 }

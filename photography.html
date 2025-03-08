@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/gallery.css" />
+    <title>Roberto's Photos</title>
+  </head>
+  <body id="photosBody">
+    <div class="galleryContainer">
+      <h1 class="gallery-title">Roberto's Gallery</h1>
+      <p class="subtitle">Debi tomar MUCHAS mas fotos...</p>
+      <div class="image-grid">
+        <div class="image-container">
+          <div class="image-card">
+            <div class="card-front">
+              <div class="placeholder-image">
+                <img src="assets/photos/reyes_cliff.JPG" />
+              </div>
+            </div>
+            <div class="card-back">
+              <h3 class="back-title">Cliff Side</h3>
+              <p class="back-text">
+                Point Reyes National Sea Shore, <br />
+                Tomales Point. Irviness, CA <br />
+                06/08/2024
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image-card">
+            <div class="card-front">
+              <div class="placeholder-image">
+                <img src="assets/photos/my_room.JPG" />
+              </div>
+            </div>
+            <div class="card-back">
+              <h3 class="back-title">Home Away From Home</h3>
+              <p class="back-text">
+                2650 38th Ave <br />
+                San Francisco, CA <br />
+                06/15/2024
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image-card">
+            <div class="card-front">
+              <div class="placeholder-image">
+                <img src="assets/photos/reyes_trees.JPG" />
+              </div>
+            </div>
+            <div class="card-back">
+              <h3 class="back-title">Green Safari</h3>
+              <p class="back-text">
+                Point Reyes National Sea Shore, <br />
+                Pierce Point Ranch. Irviness, CA <br />
+                06/08/2024
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="image-card">
+            <div class="card-front">
+              <div class="placeholder-image">
+                <img src="assets/photos/samsara_friends.JPG" />
+              </div>
+            </div>
+            <div class="card-back">
+              <h3 class="back-title">Friends</h3>
+              <p class="back-text">
+                Point Reyes National Sea Shore, <br />
+                Tomales Mounds. Irviness, CA <br />
+                06/08/2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelectorAll(".image-container").forEach((container) => {
+    container.addEventListener("click", () => {
+      container.classList.toggle("flipped");
+    });
+  });
+</script>
