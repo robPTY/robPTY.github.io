@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: "IBMPlex";
+  src: url("/assets/fonts/IBMPlexSerif-Light.ttf") format("truetype");
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: IBMPlex, sans-serif;
+}
+
+.gradient-overlay {
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.88) 15%,
+      rgba(0, 0, 0, 0.85) 35%,
+      rgba(0, 0, 0, 0.81) 50%,
+      rgba(0, 0, 0, 0.78) 60%,
+      rgba(0, 0, 0, 0.75) 70%,
+      rgba(0, 0, 0, 0.68) 75%,
+      rgba(0, 0, 0, 0.62) 80%,
+      rgba(0, 0, 0, 0.54) 82.5%,
+      rgba(0, 0, 0, 0.46) 85%,
+      rgba(0, 0, 0, 0.37) 87.5%,
+      rgba(0, 0, 0, 0.28) 90%,
+      rgba(0, 0, 0, 0.2) 92.5%,
+      rgba(0, 0, 0, 0.12) 95%,
+      rgba(0, 0, 0, 0.04) 97.5%,
+      transparent 100%);
+}
