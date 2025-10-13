@@ -80,7 +80,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
                     <h1 className="text-xl sm:text-2xl text-white flex items-center gap-2">
-                      Hi! I'm Roberto
+                      Hi! I&apos;m Roberto
                       <img
                         src="/assets/pika-wave.gif"
                         alt="Waving Pikachu"
