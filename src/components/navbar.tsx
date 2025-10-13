@@ -13,18 +13,20 @@ export default function navbar() {
 
                     <div className="flex items-center gap-6 sm:gap-8">
                         <a
-                            href="#experience"
+                            href="/#experience"
                             className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
                         >
                             experience
                         </a>
                         <a
-                            href="#projects"
+                            href="/#projects"
                             className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
                         >
                             projects
                         </a>
-
+                        {/* <button>
+                            Resume
+                        </button> */}
                         {/* <button
                 className="p-2 rounded-full hover:bg-white/5 transition-colors"
                 aria-label="Toggle theme"
