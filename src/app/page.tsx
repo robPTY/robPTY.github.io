@@ -135,7 +135,7 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-gray-300 text-md sm:text-lg leading-relaxed">
-                    I'm a graduate student at Fordham based out of New York, NY. Looking to get into AI/ML. Have a background in full-stack development.
+                    I&apos;m a graduate student at Fordham based out of New York, NY. Looking to get into AI/ML. Have a background in full-stack development.
                   </p>
                 </div>
               </div>
