@@ -37,14 +37,15 @@ export default function Home() {
     map.current = new maplibregl.Map({
       container: mapContainer.current,
       style: 'https://tiles.openfreemap.org/styles/positron',
-      center: [-74.0060, 40.7128], // Lincoln Center, NYC
+      center: [-74.0060, 40.7128],
       zoom: 10,
-      interactive: false, // Disable user interaction
-      attributionControl: false, // Hide attribution popup
+      interactive: false,
+      attributionControl: false,
     });
 
     return () => {
       map.current?.remove();
+      map.current = null;
     };
   }, []);
 
@@ -55,7 +56,7 @@ export default function Home() {
       <main className="pt-24 sm:pt-32 px-6 sm:px-8">
         <div className="max-w-xl mx-auto flex justify-center">
           <section className="w-full max-w-xl">
-            <div className="relative rounded-xl overflow-hidden h-[380px] sm:h-[350px]">
+            <div className="relative rounded-xl overflow-hidden h-[450px] sm:h-[420px]">
               <div ref={mapContainer} className="absolute inset-0 w-full h-full"></div>
 
               <div className="absolute gradient-overlay" />
@@ -135,19 +136,35 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-gray-300 text-md sm:text-lg leading-relaxed">
-                    I&apos;m a graduate student at Fordham based out of New York, NY. Looking to get into AI/ML. Have a background in full-stack development.
+                    I&apos;m a graduate student (MSc.) at Fordham based out of New York City. My background is in full-stack development
+                    and machine learning, and I love building things that make a difference.
                   </p>
                 </div>
               </div>
             </div>
+            <p className="text-gray-300 mt-4 text-md sm:text-lg text-center leading-relaxed">
+              Feel free to reach out at{" "}
+              <a
+                href="mailto:robertoagueron@gmail.com"
+                className="underline text-blue-400 hover:text-blue-300"
+              >
+                rcagueros@gmail.com
+              </a>
+            </p>
           </section>
         </div>
 
-        <section id="experience" className="max-w-7xl mx-auto mt-20 sm:mt-20 mb-20 px-2 sm:px-0">
+        <section
+          id="experience"
+          className="max-w-7xl mx-auto mt-20 sm:mt-20 mb-20 px-2 sm:px-0 scroll-mt-24 sm:scroll-mt-32"
+        >
           <Experience />
         </section>
 
-        <section id="projects" className="max-w-7xl mx-auto mt-20 sm:mt-32 mb-20">
+        <section
+          id="projects"
+          className="max-w-7xl mx-auto mt-20 sm:mt-32 mb-20 scroll-mt-24 sm:scroll-mt-32"
+        >
           <Projects />
         </section>
       </main >

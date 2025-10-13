@@ -47,3 +47,88 @@ body {
       rgba(0, 0, 0, 0.04) 97.5%,
       transparent 100%);
 }
+
+.ProjectGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.ProjectCard {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ProjectImageHolder {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.5rem;
+}
+
+.ProjectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.ProjectTitle {
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.ProjectDescription {
+  color: #c9d1d9;
+  margin: 0;
+}
+
+.TechStack {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  gap: 0.5rem;
+}
+
+.TechStack span {
+  background-color: #21262d;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  color: #c9d1d9;
+}
+
+.ProjectLinks {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.Button {
+  background-color: #f0f6fc;
+  color: #0d1117;
+  padding: 0.25rem;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #c9d1d9;
+}
