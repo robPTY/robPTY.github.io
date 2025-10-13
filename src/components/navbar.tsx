@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 export default function navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 py-4 sm:py-6">
                 <div className="flex items-center justify-between">
                     <h2 className="text-xl sm:text-2xl tracking-tight text-foreground">
-                        <a href="/" className="hover:cursor-pointer">
+                        <Link href="/" className="hover:cursor-pointer">
                             roberto aguero
-                        </a>
+                        </Link>
                     </h2>
 
                     <div className="flex items-center gap-6 sm:gap-8">

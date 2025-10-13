@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Projects() {
     return (
         <>
@@ -14,7 +16,7 @@ export default function Projects() {
                 >
                     <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
                         <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                            <img src='/assets/photos/prompt_home.JPG' alt='PromptHome Screenshot' className="object-cover w-full h-full" />
+                            <Image src='/assets/photos/prompt_home.JPG' alt='PromptHome Screenshot' className="object-cover w-full h-full" />
                         </div>
                     </div>
 
@@ -36,7 +38,7 @@ export default function Projects() {
                 >
                     <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
                         <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                            <img src="/assets/photos/tyson.JPG" alt="Tyson Foods Capstone Project Screenshot" className="object-cover w-full h-full" />
+                            <Image src="/assets/photos/tyson.JPG" alt="Tyson Foods Capstone Project Screenshot" className="object-cover w-full h-full" />
                         </div>
                     </div>
 
