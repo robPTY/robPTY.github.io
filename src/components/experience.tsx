@@ -58,7 +58,7 @@ export default function Experience() {
                                     </div>
                                 </div>
 
-                                <p className="mt-3 text-base text-gray-300 leading-relaxed">Driver portal product for the Training team, "Focus on Customer Success" 2024 award winner</p>
+                                <p className="mt-3 text-base text-gray-300 leading-relaxed">Driver portal product for the Training team, &quot;Focus on Customer Success&quot; 2024 award winner</p>
                                 <div className="mt-3 flex flex-wrap gap-2">
                                     <span className="text-xs font-mono px-2 py-1 rounded bg-white/3 border border-white/6">React</span>
                                     <span className="text-xs font-mono px-2 py-1 rounded bg-white/3 border border-white/6">TypeScript</span>
@@ -88,7 +88,7 @@ export default function Experience() {
                                     </div>
                                 </div>
 
-                                <p className="mt-3 text-base text-gray-300 leading-relaxed">Worked on a CRM for an events company optimizing data pipeliness</p>
+                                <p className="mt-3 text-base text-gray-300 leading-relaxed">Worked on a CRM for an events company optimizing data pipelines</p>
                                 <div className="mt-3 flex flex-wrap gap-2">
                                     <span className="text-xs font-mono px-2 py-1 rounded bg-white/3 border border-white/6">C#</span>
                                     <span className="text-xs font-mono px-2 py-1 rounded bg-white/3 border border-white/6">.NET</span>

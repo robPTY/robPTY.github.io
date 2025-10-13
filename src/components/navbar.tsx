@@ -12,18 +12,18 @@ export default function navbar() {
                     </h2>
 
                     <div className="flex items-center gap-6 sm:gap-8">
-                        <a
+                        <Link
                             href="/#experience"
                             className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
                         >
                             experience
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="/#projects"
                             className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
                         >
                             projects
-                        </a>
+                        </Link>
                         {/* <button>
                             Resume
                         </button> */}

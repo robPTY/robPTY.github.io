@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import Image from "next/image";
 
 export default function ProjectsPage() {
     const GitHubIcon = () => (
@@ -17,7 +18,7 @@ export default function ProjectsPage() {
 
     const projects = [
         {
-            image: "assets/photos/prompt_home.JPG",
+            image: "/assets/photos/prompt_home.JPG",
             title: "PromptHome",
             description: "LLM prompt sharing/discovery platform",
             techStack: ["TypeScript", "NextJS", "React", "Supabase"],
@@ -26,7 +27,7 @@ export default function ProjectsPage() {
                 { label: "Visit", icon: <span>🌐</span>, href: "https://prompthome.app", disabled: false }]
         },
         {
-            image: "assets/photos/tyson.JPG",
+            image: "/assets/photos/tyson.JPG",
             title: "Tyson Foods Capstone Project",
             description: "AI-Powered industrial inspection system",
             techStack: ["Python", "OpenCV", "PyTorch", "MariaDB", "SCADA"],
@@ -36,7 +37,7 @@ export default function ProjectsPage() {
             ]
         },
         {
-            image: "assets/photos/7brew.JPG",
+            image: "/assets/photos/7brew.JPG",
             title: "Issue Tracker System",
             description: "Ticketing system web-app for 7Brew Coffee",
             techStack: ["JavaScript", "Vue", "Nuxt3", "Firebase"],
@@ -45,7 +46,7 @@ export default function ProjectsPage() {
             ]
         },
         {
-            image: "assets/photos/all_lights.png",
+            image: "/assets/photos/all_lights.png",
             title: "All Of The Lights",
             description: "Hand-gesture LED/House light controls",
             techStack: ["Python", "OpenCV", "Arduino"],
@@ -77,10 +78,11 @@ export default function ProjectsPage() {
                                 className="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform flex flex-col"
                             >
                                 <div className="relative w-full h-48 sm:h-56 bg-white/5 overflow-hidden">
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={`${project.title} Screenshot`}
                                         className="w-full h-full object-cover"
+                                        fill
                                     />
                                 </div>
 
