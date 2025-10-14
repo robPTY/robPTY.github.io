@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             description: "LLM prompt sharing/discovery platform",
             techStack: ["TypeScript", "NextJS", "React", "Supabase"],
             links: [
-                { label: "Repo", icon: <GitHubIcon />, href: "https://github.com/robPTY/promptjar", disabled: false },
+                { label: "Repo", icon: <GitHubIcon />, href: "https://github.com/robPTY/promptjar", disabled: true },
                 { label: "Visit", icon: <span>🌐</span>, href: "https://prompthome.app", disabled: false }]
         },
         {
