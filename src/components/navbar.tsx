@@ -24,6 +24,12 @@ export default function navbar() {
                         >
                             projects
                         </Link>
+                        <Link
+                            href="https://raguero.bearblog.dev/blog/"
+                            className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
+                        >
+                            blog
+                        </Link>
                         {/* <button>
                             Resume
                         </button> */}
