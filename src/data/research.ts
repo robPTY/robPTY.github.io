@@ -16,7 +16,7 @@ export interface ResearchEntry {
 
 export const researchEntries: ResearchEntry[] = [
   {
-    image: "/assets/photos/segmentation_ex.PNG",
+    image: "/assets/photos/segmentation_ex.png",
     title: "Multi-Neuron Segmentation (3D Drosophila)",
     authors: "Roberto Aguero, Dr. Yiyin Zhou",
     venue: "In Progress",
