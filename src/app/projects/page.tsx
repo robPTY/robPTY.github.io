@@ -21,8 +21,8 @@ const icons: Record<IconType, React.ReactNode> = {
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-        <div className="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col">
-            <div className="relative w-full h-48 sm:h-56 bg-white/5 overflow-hidden">
+        <div className="bg-surface rounded-xl overflow-hidden border border-border hover:border-foreground/20 transition-all duration-300 flex flex-col">
+            <div className="relative w-full h-48 sm:h-56 bg-surface overflow-hidden">
                 <Image
                     src={project.image}
                     alt={`${project.title} Screenshot`}
@@ -32,31 +32,20 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">
+                <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-3">
                     {project.title}
                 </h3>
 
-                <p className="text-gray-400 mb-4 flex-grow">
+                <p className="text-muted mb-4 flex-grow">
                     {project.description}
                 </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {project.techStack.map((tech) => (
-                        <span
-                            key={tech}
-                            className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/10"
-                        >
-                            {tech}
-                        </span>
-                    ))}
-                </div>
 
                 <div className="flex flex-wrap gap-3">
                     {project.links.map((link) =>
                         link.disabled ? (
                             <span
                                 key={link.label}
-                                className="px-4 py-2 bg-white/5 text-gray-500 text-sm rounded-lg border border-white/10 flex items-center gap-2 cursor-not-allowed"
+                                className="px-4 py-2 bg-background/60 text-muted text-sm rounded-lg border border-border flex items-center gap-2 cursor-not-allowed"
                             >
                                 {icons[link.icon]}
                                 {link.label}
@@ -67,7 +56,7 @@ function ProjectCard({ project }: { project: Project }) {
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors border border-white/10 hover:border-white/20 flex items-center gap-2"
+                                className="px-4 py-2 bg-background/60 hover:bg-background/80 text-foreground text-sm rounded-lg transition-colors border border-border hover:border-foreground/20 flex items-center gap-2"
                             >
                                 {icons[link.icon]}
                                 {link.label}
@@ -88,10 +77,10 @@ export default function ProjectsPage() {
             <main className="pt-24 sm:pt-32 px-6 sm:px-8 pb-20">
                 <div className="max-w-5xl mx-auto">
                     <div className="mb-12 sm:mb-16">
-                        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
                             Projects
                         </h1>
-                        <p className="text-gray-400 text-lg max-w-2xl">
+                        <p className="text-muted text-lg max-w-2xl">
                             A collection of some of my most recent work.
                         </p>
                     </div>

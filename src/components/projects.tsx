@@ -8,41 +8,78 @@ export default function Projects() {
     return (
         <>
             <div className="mb-8">
-                <h2 className="text-2xl sm:text-2xl text-foreground mb-2">
-                    Recent projects
+                <h2 className="text-2xl sm:text-2xl text-foreground mb-2 font-semibold">
+                    Projects
                 </h2>
+
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-8">
                 {recentProjects.map((project) => {
-                    const primaryLink = project.links.find((l) => !l.disabled) ?? project.links[0];
+                    const primaryLink = project.links.find((link) => !link.disabled);
                     return (
-                        <a
+                        <article
                             key={project.title}
-                            href={primaryLink.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                            className={`flex flex-col sm:flex-row gap-6 sm:gap-8 rounded-2xl border p-4 sm:p-6 ${project.featured
+                                ? "bg-[#fff6d5] border-[#e2d2a2]"
+                                : "bg-surface border-border"
+                                }`}
                         >
-                            <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                                    <Image
-                                        src={project.image}
-                                        alt={`${project.title} Screenshot`}
-                                        className="object-cover w-full h-full"
-                                        fill
-                                    />
-                                </div>
+                            <div className="relative w-full sm:w-72 md:w-80 aspect-video rounded-lg overflow-hidden border border-border bg-white">
+                                <Image
+                                    src={project.image}
+                                    alt={`${project.title} Screenshot`}
+                                    className="object-contain"
+                                    fill
+                                />
                             </div>
 
-                            <div className="p-6">
-                                <h3 className="text-2xl text-white mb-3">
-                                    {project.title}
+                            <div className="flex-1">
+                                <h3 className="text-lg sm:text-xl text-foreground font-semibold">
+                                    {primaryLink ? (
+                                        <a
+                                            href={primaryLink.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-link transition-colors"
+                                        >
+                                            {project.title}
+                                        </a>
+                                    ) : (
+                                        project.title
+                                    )}
                                 </h3>
-                                <p className="text-gray-400 text-base leading-relaxed">
+                                <p className="text-muted mt-2">
                                     {project.description}
                                 </p>
+                                <p className="text-foreground mt-3 text-sm">
+                                    <span className="text-muted">Tech:</span> {project.techStack.join(", ")}
+                                </p>
+
+                                {project.links.length > 0 && (
+                                    <div className="mt-3 flex flex-wrap items-center">
+                                        {project.links.map((link, index) => (
+                                            <span key={link.label} className="flex items-center">
+                                                {index > 0 && (
+                                                    <span className="text-muted mx-2">/</span>
+                                                )}
+                                                {link.disabled ? (
+                                                    <span className="text-muted">[{link.label}]</span>
+                                                ) : (
+                                                    <a
+                                                        href={link.href}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-link hover:text-link/80 transition-colors"
+                                                    >
+                                                        [{link.label}]
+                                                    </a>
+                                                )}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
-                        </a>
+                        </article>
                     );
                 })}
             </div>
