@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f1e6;
+  --foreground: #2c2b27;
+  --surface: #fffaf2;
+  --muted: #6b655b;
+  --border: #e4dccb;
+  --link: #2b5bd7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-link: var(--link);
 }
 
 @font-face {
@@ -56,11 +57,11 @@ body {
 }
 
 .ProjectCard {
-  background-color: #161b22;
+  background-color: var(--surface);
   padding: 1rem;
   border-radius: 1rem;
   width: 100%;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(44, 43, 39, 0.08);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -84,12 +85,12 @@ body {
 
 .ProjectTitle {
   font-weight: bold;
-  color: white;
+  color: var(--foreground);
   margin: 0;
 }
 
 .ProjectDescription {
-  color: #c9d1d9;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -101,11 +102,11 @@ body {
 }
 
 .TechStack span {
-  background-color: #21262d;
+  background-color: var(--background);
   padding: 0.3rem 0.7rem;
   border-radius: 0.5rem;
   font-size: 0.85rem;
-  color: #c9d1d9;
+  color: var(--muted);
 }
 
 .ProjectLinks {
@@ -116,8 +117,8 @@ body {
 }
 
 .Button {
-  background-color: #f0f6fc;
-  color: #0d1117;
+  background-color: var(--background);
+  color: var(--foreground);
   padding: 0.25rem;
   padding-left: 0.35rem;
   padding-right: 0.35rem;
@@ -130,5 +131,5 @@ body {
 }
 
 .btn:hover {
-  background-color: #c9d1d9;
+  background-color: var(--border);
 }
