@@ -13,20 +13,20 @@ export default function navbar() {
 
                     <div className="flex items-center gap-6 sm:gap-8">
                         <Link
-                            href="/#experience"
-                            className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
+                            href="/#research"
+                            className="text-sm sm:text-base text-muted hover:text-foreground transition-colors"
                         >
-                            experience
+                            research
                         </Link>
                         <Link
-                            href="/#projects"
-                            className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
+                            href="/projects"
+                            className="text-sm sm:text-base text-muted hover:text-foreground transition-colors"
                         >
                             projects
                         </Link>
                         <Link
                             href="https://raguero.bearblog.dev/blog/"
-                            className="text-sm sm:text-base text-gray-400 hover:text-foreground transition-colors"
+                            className="text-sm sm:text-base text-muted hover:text-foreground transition-colors"
                             target="_blank"
                         >
                             blog

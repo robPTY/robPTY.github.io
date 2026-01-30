@@ -13,9 +13,49 @@ export interface Project {
   description: string;
   techStack: string[];
   links: ProjectLink[];
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    image: "/assets/photos/Transformer.png",
+    title: "TinyLM (Transformer From Scratch)",
+    description:
+      "52M parameter Transformer model trained on 142k+ sentence pairs for English-Spanish translation.",
+    techStack: ["Python", "PyTorch"],
+    featured: false,
+    links: [
+      {
+        label: "Repo",
+        icon: "github",
+        href: "https://github.com/robPTY/TinyLM",
+      },
+    ],
+  },
+  {
+    image: "/assets/photos/Exsamine.png",
+    title: "ExSAMine (Hoya Hacks 2026)",
+    description:
+      "Web app using Meta's SAM3 for image/video segmentation of cctv footage.",
+    techStack: ["Python", "PyTorch"],
+    links: [
+      {
+        label: "Repo",
+        icon: "github",
+        href: "https://github.com/robPTY/TinyLM",
+      },
+      {
+        label: "Devpost",
+        icon: "web",
+        href: "https://devpost.com/software/exsamine",
+      },{
+        label: "2nd in Forensics",
+        icon: "trophy",
+        href: "#",
+        disabled: true,
+      }
+    ],
+  },
   {
     image: "/assets/photos/seq2seq.png",
     title: "Neural Machine Translation (English to Spanish)",
@@ -43,24 +83,6 @@ export const projects: Project[] = [
         disabled: true,
       },
       { label: "Visit", icon: "web", href: "https://prompthome.app" },
-    ],
-  },
-  {
-    image: "/assets/photos/tyson.JPG",
-    title: "Tyson Foods Capstone Project",
-    description: "AI-Powered industrial inspection system",
-    techStack: ["Python", "OpenCV", "PyTorch", "MariaDB", "SCADA"],
-    links: [
-      {
-        label: "Repo",
-        icon: "github",
-        href: "https://github.com/robPTY/JBU_Tyson_Capstone",
-      },
-      {
-        label: "More Info",
-        icon: "doc",
-        href: "https://drive.google.com/file/d/1JiCMIwvak_pIPLcLRyhhYjEAk3lck0sf/view",
-      },
     ],
   },
   {
