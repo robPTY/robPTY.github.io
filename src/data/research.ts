@@ -17,11 +17,11 @@ export interface ResearchEntry {
 export const researchEntries: ResearchEntry[] = [
   {
     image: "/assets/photos/segmentation_ex.png",
-    title: "Multi-Neuron Segmentation (3D Drosophila)",
+    title: "Drosophila Multi-Neuron Connectome Assembly",
     authors: "Roberto Aguero, Dr. Yiyin Zhou",
     venue: "In Progress",
     summary:
-      "We are developing an algorithm that can segment neurons in 2D & 3D Drosophila Light Microscopy images, using the multiple soma's in the brain as the starting point.",
+      "We are developing an algorithm that can segment neurons in 2D & 3D Drosophila Light Microscopy images, using the multiple soma's in the brain as the starting point. The goal is to assemble a neuronal connectome.",
     links: [],
   },
   {
@@ -34,10 +34,15 @@ export const researchEntries: ResearchEntry[] = [
     highlight: false,
     presentation: true,
     links: [
-      { label: "Abstract", href: "https://drive.google.com/file/d/1JiCMIwvak_pIPLcLRyhhYjEAk3lck0sf/view" },
-      { label: "Poster", href: "https://drive.google.com/file/d/1ZFSO210V7kmnYoIssmvPuB1F9Im37BCS/view?usp=sharing"},
+      {
+        label: "Abstract",
+        href: "https://drive.google.com/file/d/1JiCMIwvak_pIPLcLRyhhYjEAk3lck0sf/view",
+      },
+      {
+        label: "Poster",
+        href: "https://drive.google.com/file/d/1ZFSO210V7kmnYoIssmvPuB1F9Im37BCS/view?usp=sharing",
+      },
       { label: "Code", href: "https://github.com/robPTY/JBU_Tyson_Capstone" },
     ],
   },
 ];
-
