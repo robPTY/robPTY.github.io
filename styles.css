@@ -1,0 +1,346 @@
+/* ----- concentric circle rotation ----- */
+.circle-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+.outer-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.inner-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.outer-circle {
+  animation-name: rotate-counterclockwise;
+}
+
+.inner-circle {
+  animation-name: rotate-clockwise;
+}
+
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+div.circle-container {
+  /* border: 2px solid #333; */
+
+  position: fixed;
+  top: 15vh;
+  left: 5vw;
+
+  width: 90vw;
+  height: 70vh;
+}
+
+/* ----- menu ----- */
+
+a.menu {
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  /* border-bottom: 1.5px solid #000 !important; */
+}
+
+a.menu:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid #000 !important;
+}
+
+/* ----- works ----- */
+
+a.workLink {
+  display: flex;
+  justify-content: space-between;
+
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+}
+
+a.workLink:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid #000 !important;
+}
+
+.workTitle {
+  text-align: left;
+  text-decoration: none;
+}
+
+.workDate {
+  min-width: 7em;
+  text-align: right;
+}
+
+/* ----- essays ----- */
+div.essay {
+  /* padding-top: 15vh;
+  padding-bottom: 15vh;
+  padding-left:30vw;
+  padding-right: 30vw; */
+
+  font-size: 18pt;
+  text-align: justify;
+}
+
+p.essayTitle {
+  font-size: 24pt;
+  text-align: center;
+  /* border: 2px solid #333; */
+}
+
+p.essay {
+  text-indent: 2em;
+}
+
+p.essayFootnote {
+  font-size: 16pt;
+}
+
+p.essayDate {
+  text-align: right;
+}
+
+img.essayImage {
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+a.essayLink {
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  /* border-bottom: 1.5px solid #000 !important; */
+}
+
+a.essayLink:hover {
+  cursor: pointer;
+  border-bottom: 1.5px solid #000 !important;
+}
+
+/* ----- basic ----- */
+
+body {
+  background-color: #f0f0f0;
+}
+
+object {
+  /* border: 2px solid #333; */
+  background-color: transparent;
+}
+
+/* ----- desktop ----- */
+@media (900px < width) {
+  /* ----- index ----- */
+
+  img.robertoImg {
+    padding-left: 10vw;
+    width: 20vw;
+  }
+
+  /* ----- menu ----- */
+
+  div.mobileMenu {
+    display: none;
+  }
+
+  div.desktopMenu {
+    position: fixed !important;
+    top: 5vh;
+    left: 5vw;
+
+    padding-left: 5vw;
+    padding-top: 5vh;
+    display: block;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    /* border: 2px solid #333; */
+    font-size: 18pt;
+  }
+
+  /* ----- works ----- */
+
+  div.worksLinks {
+    padding-left: 30vw;
+    padding-right: 30vw;
+
+    font-size: 18pt;
+  }
+
+  /* ----- contact ----- */
+
+  div.contact {
+    /* border: 2px solid #333; */
+
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+
+    width: 40vw;
+    height: 100%;
+    /* justify-content: center; */
+  }
+
+  div.socialLinks {
+    font-size: 18pt;
+    margin-top: 1em;
+  }
+
+  p.contact {
+    font-size: 18pt;
+  }
+
+  div.contact {
+    top: 24vh;
+  }
+
+  /* ----- essays ----- */
+  div.essay {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
+
+    font-size: 18pt;
+  }
+}
+
+/* ----- mobile ----- */
+@media (900px > width) {
+  /* ----- index ----- */
+
+  img.robertoImg {
+    padding-left: 10vw;
+    width: 50vw;
+  }
+
+  /* ----- menu ----- */
+
+  div.desktopMenu {
+    display: none;
+  }
+  div.mobileMenu {
+    background-color: #f0f0f0;
+
+    font-size: 14pt;
+    border-bottom: 2px solid #333;
+    position: fixed;
+    left: 0vw;
+    top: 0vh;
+
+    display: block;
+
+    width: 86vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+    justify-content: center;
+  }
+
+  div.linkRow {
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr 0.8fr;
+    align-items: center;
+    width: 100%;
+  }
+
+  #leftMenuLink {
+    padding-right: 1em;
+    justify-self: end;
+  }
+
+  #middleMenuLink {
+    justify-self: center;
+  }
+
+  #rightMenuLink {
+    padding-left: 1em;
+    justify-self: start;
+  }
+
+  /* ----- contact ----- */
+
+  div.contact {
+    /* border: 2px solid #333; */
+
+    position: fixed;
+    top: 20vh;
+    left: 20vw;
+
+    width: 60vw;
+    height: 100%;
+  }
+
+  p.contact {
+    font-size: 16pt;
+  }
+
+  div.contact {
+    top: 24vh;
+  }
+
+  /* ----- essays ----- */
+  div.essay {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    font-size: 12pt;
+    text-align: justify;
+  }
+
+  p.essayFootnote {
+    font-size: 12pt;
+  }
+
+  /* ----- works ----- */
+
+  div.worksLinks {
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    font-size: 16pt;
+  }
+}

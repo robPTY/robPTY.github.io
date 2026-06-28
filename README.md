@@ -1,2 +1,2 @@
 Welcome to my personal website! http://rcaguero.com
-Design and source code are from [Jon Barron's website](https://jonbarron.info/) with minor tweaks.
+Design and source code are from [Emre Alca's website](https://alcaemre.com) with minor tweaks. Thank you to my good friend for inspiration
