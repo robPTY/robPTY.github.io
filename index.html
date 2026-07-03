@@ -10,6 +10,7 @@
     href="assets/favico/favicon.ico"
     type="image/x-icon"
   />
+  <link rel="preload" as="image" href="assets/photos/roberto.jpg">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <style>
@@ -19,13 +20,16 @@
       font-weight: 500;
       font-style: normal;
     }
+    a {
+    text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <div class="essay">
     <p class="essayTitle">Roberto Aguero</p>
     <!-- <br> -->
-    <img src="assets/photos/roberto.jpg" class="robertoImg" alt="">
+    <img src="assets/photos/roberto.jpg" class="robertoImg" alt="Roberto Aguero" fetchpriority="high">
     <br>
     <p class="essay">
       I am a MSc. student at
